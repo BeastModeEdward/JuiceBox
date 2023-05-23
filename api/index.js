@@ -23,7 +23,12 @@ apiRouter.use(async (req, res, next) => {
       if (id) {
         req.user = await getUserById(id);
         next();
-      }
+      } 
+      next({
+        name: 'UserNotFound' ,
+        message: 'No user found'
+    });
+      console.log('uh oh')
     } catch ({ name, message }) {
       next({ name, message });
     }
