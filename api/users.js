@@ -28,7 +28,7 @@ const jwt = require('jsonwebtoken');
   
       if (user && user.password == password) {
         const token = jwt.sign({
-            id: usersRouter.id,
+            id: user.id,
             username,
             
             /* user data that you fetched from your database, i.e. the user's username, password, and id values */
