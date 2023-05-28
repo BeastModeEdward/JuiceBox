@@ -5,7 +5,7 @@ const express = require('express');
 const server = express();
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
-//Got help with the bodyParser part
+
 
 
 const apiRouter = require('./api');
